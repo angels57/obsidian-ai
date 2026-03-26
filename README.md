@@ -4,6 +4,17 @@ An intelligent automation system that organizes your Obsidian vault using **Lang
 
 ---
 
+## 🧩 Why Obsidian AI?
+
+Manual organization is the primary reason most personal knowledge management systems fail. Obsidian AI was built to solve:
+
+- **Organizational Fatigue**: Automatically follows the **Forever Notes** methodology so you don't have to worry about where things go or how to name them.
+- **English-Only Consistency**: Enforces the methodology's rule that all permanent notes should be in English, providing translation or reformatting if needed.
+- **Knowledge Fragmentation**: Instead of having 10 small notes on the same topic, the **Knowledge Integrator** automatically merges related thoughts into existing notes.
+- **Discoverability**: Automatically maintains "Breadcrumbs" and "Hubs" (Maps of Content), ensuring every note is linked and easy to find.
+
+---
+
 ## ⚡ How It Works
 
 When you drop a new `.md` file into your `Index/` folder, the system automatically:
@@ -161,13 +172,13 @@ vault/
 
 ## 🔧 Tech Stack
 
-| Technology | Purpose |
-|---|---|
-| **LangGraph** | Orchestrates the multi-node workflow |
-| **OpenAI (gpt-4o-mini)** | Powers LLM nodes (summary, integration, routing, formatting) |
-| **Watchdog** | Monitors the filesystem for new notes |
-| **Pydantic** | Structured LLM output validation |
-| **Python 3.14** | Runtime |
+| Technology | Purpose | Why? |
+|---|---|---|
+| **LangGraph** | Orchestration | Enables complex, stateful workflows with decision loops (like the Merge vs Create logic). |
+| **OpenAI (gpt-4o-mini)** | Reasoning | Provides high-quality semantic analysis (summarization, routing) with extremely low latency and cost. |
+| **Watchdog** | Monitoring | Allows for a frictionless experience by automating the workflow the moment you save a file. |
+| **Pydantic** | Validation | Guarantees that the AI's output is structured and safe for filesystem operations. |
+| **uv** | Environment | Modern, ultra-fast Python dependency management for a seamless developer experience. |
 
 ---
 
